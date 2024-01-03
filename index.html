@@ -9,7 +9,7 @@
 <body>
     <main>
         <h1>Calculadora de Média SISU</h1>
-        <form>
+        <form  id="form">
             <fieldset>
                 <label for="notaLinguagens"><strong>Linguagens e seus Códigos</strong></label>
                 <input type="number" class="nota" name="notaLinguagens" id="notaLinguagens" placeholder="Nota" step="any" min="0">
@@ -36,9 +36,17 @@
                 <input type="number" class="peso" name="pesoRedacao" id="pesoRedacao" placeholder="Peso" step="any" min="1">
             </fieldset>
 
-            <button>CALCULAR</button>
+            <button class="btnCalcular" onclick="calcular(event)">Calcular</button>
         </form>
-        <div class="resultado"></div>
+        <div id="mainModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="fecharModal()">&times;</span>
+                <h1>Sua média é:<span id="mediaValor">546,89</span></h1>
+                <button class="btnNovoCalculo" onclick="realizarNovoCalculo()">Calcular Novamente</button>
+            </div>
+        </div>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
