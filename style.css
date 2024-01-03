@@ -48,6 +48,8 @@ input.nota, input.peso {
     height: 30px;
     position: relative;
     color: #535353;
+    border-radius: 5px;
+    border: 1px solid #b4b4b4;
 }
 
 input.nota:focus, input.peso:focus {
